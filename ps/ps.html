@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="font_2w6w3jj7pwpfd2t9/iconfont.css">
+    <script src="jquery.js"></script>
+    <script src="shape1.js"></script>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            list-style: none;
+
+        }
+        a{
+            text-decoration: none;
+        }
+        .box{
+            width:1200px;
+            height:600px;
+            position: absolute;
+            top:0;
+            left:0;
+            bottom:0;
+            right:0;
+            margin:auto;
+        }
+        .nav{
+            width:100%;
+            height:9%;
+            background: #29CCCC;
+        }
+        .nav h4{
+            width:200px;
+            line-height:50px;
+            display: block;
+            margin:0 auto;
+            position: relative;
+            font-size: 30px;
+            font-family:苹方;
+        }
+        .nav a{
+            width:36px;
+            line-height:18px;
+            position: absolute;
+            text-align: center;
+            right:25px;
+            top:10px;
+            font-size: 25px;
+        }
+        .main{
+            width:100%;
+            height:92%;
+            border:5px solid #29CCCC;
+            background: #F0F0F0;
+            border-top:0;
+            position: relative;
+        }
+        .main .aside{
+            width:20%;
+            height:100%;
+            background: #F0F0F0;
+            float: right;
+            position: relative;
+        }
+        .canvas-box{
+            width:80%;
+            height:100%;
+            background: #fff;
+            position: absolute;
+            top:0;
+            left:0;
+        }
+        canvas{
+            background: #fff;
+        }
+        .canvas-box .copy{
+            position: absolute;
+            left:0;top:0;z-index:999;
+            width:100%;height:100%;
+        }
+        .aside div:nth-child(1){
+            width:90%;
+            height:50px;
+            border:1px solid #000;
+            position: absolute;
+            top:10px;
+            left:10px;
+        }
+        .aside div:nth-child(1) span{
+            display: block;
+            background: #F0F0F0;
+            width:80px;
+            height:18px;
+            text-align: center;
+            position: absolute;
+            top:-10px;
+            left:20px;
+            font-weight: bold;
+        }
+
+        .aside div:nth-child(1) ul{
+            position: absolute;
+            top:10px;
+            left:15px;
+        }
+        .aside div:nth-child(1) ul li{
+            float: left;
+            margin-left: 5px;
+
+        }
+        .aside div:nth-child(2){
+            width:90%;
+            height:240px;
+            position: absolute;
+            top:70px;
+            left:10px;
+            border:1px solid #000;
+        }
+        .aside div:nth-child(2) span{
+            display: block;
+            background: #F0F0F0;
+            width:80px;
+            height:18px;
+            text-align: center;
+            font-weight:bold;
+            position: absolute;
+            top:-10px;
+            left:20px;
+        }
+        .aside div:nth-child(2) ul{
+            position: absolute;
+            top:10px;
+            left:-5px;
+        }
+        .aside div:nth-child(2) ul li{
+            float: left;
+            margin-left: 20px;
+            margin-top: 10px;
+            width:30px;
+            height:30px;
+            border:1px solid #ccc;
+            text-align: center;
+            /*padding:10px;*/
+            line-height:30px;
+            background: #fff;
+            cursor: pointer;
+        }
+        .aside div:nth-child(2) ul li:hover{
+             background: #ccc;
+         }
+        .aside div:nth-child(2) .daxiao{
+            position: absolute;
+            top:80px;
+            left:-5px;
+        }
+        .aside div:nth-child(2) .daxiao li{
+            width:100%;
+            height:30px;
+            border:0;
+            background:none;
+            cursor:default;
+        }
+        .aside div:nth-child(2) .daxiao li:hover{
+            background: none;
+        }
+        .aside div:nth-child(2) .daxiao li input{
+            margin-left:50px;
+        }
+        .aside div:nth-child(2) .daxiao li p{
+            float: left;
+            margin-top:-2px;
+            font-weight:bold;
+        }
+        .aside div:nth-child(3){
+            width:90%;
+            height:50px;
+            position: absolute;
+            top:320px;
+            left:10px;
+            border:1px solid #000;
+        }
+        .aside div:nth-child(3) span{
+            display: block;
+            background: #F0F0F0;
+            width:80px;
+            height:18px;
+            text-align: center;
+            font-weight:bold;
+            position: absolute;
+            top:-10px;
+            left:20px;
+        }
+        .aside div:nth-child(3) ul{
+            position: absolute;
+            top:10px;
+            left:20px;
+        }
+        .aside div:nth-child(3) ul li{
+            float: left;
+            margin-left: 20px;
+        }
+        .aside div:nth-child(4){
+            width:90%;
+            height:50px;
+            position: absolute;
+            top:380px;
+            left:10px;
+            border:1px solid #000;
+        }
+        .aside div:nth-child(4) span{
+            display: block;
+            background: #F0F0F0;
+            width:40px;
+            height:18px;
+            text-align: center;
+            font-weight:bold;
+            position: absolute;
+            top:-10px;
+            left:40px;
+        }
+        .aside div:nth-child(4) ul{
+            position: absolute;
+            top:15px;
+            left:0;
+        }
+        .aside div:nth-child(4) ul li{
+            float: left;
+            margin-left: 25px;
+        }
+        .aside div:nth-child(5){
+            width:90%;
+            height:100px;
+            position: absolute;
+            top:440px;
+            left:10px;
+            border:1px solid #000;
+        }
+        .aside div:nth-child(5) p{
+            float: left;
+            position: absolute;
+            bottom:3px;
+            left:10px;
+        }
+        .aside div:nth-child(5) p strong{
+            width:60px;
+            margin-left: 1px;
+        }
+        .aside div:nth-child(5) span{
+            display: block;
+            background: #F0F0F0;
+            width:80px;
+            height:18px;
+            text-align: center;
+            font-weight:bold;
+            position: absolute;
+            top:-10px;
+            left:20px;
+        }
+        .aside div:nth-child(5) ul{
+            position: absolute;
+            top:15px;
+            left:20px;
+        }
+        .aside div:nth-child(5) ul li{
+            float: left;
+            width:100px;
+            height:25px;
+            margin-left: 0px;
+        }
+        .aside div:nth-child(5) ul li a{
+            padding:2px 20px;
+            width:100px;
+            height: 25px;
+            line-height: 20px;
+            position: relative;
+            cursor: pointer;
+            color: #1E88C7;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow: hidden;
+            display: inline-block;
+            text-decoration: none;
+        }
+        .aside div:nth-child(5) ul li a:hover{
+            background: #AADFFD;
+            border-color: #78C3F3;
+            color: #004974;
+            text-decoration: none;
+        }
+        .aside div:nth-child(5) ul li input{
+            position: absolute;
+            font-size: 100px;
+            right: 0;
+            top: 0;
+            opacity: 0;
+            filter: alpha(opacity=0);
+            cursor: pointer
+
+        }
+        .xp{
+            width:10px;
+            height:10px;
+            background:rgba(0,0,0,0.7);
+            position: absolute;
+            top:0;
+            left:0;
+            display: none;
+        }
+        .selectarea{
+            position:absolute;
+            left:0;top:0;
+            border:1px dotted #000;
+            display:none;
+        }
+
+        
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="nav">
+        <h4>canvas画板</h4>
+        <a href="" class="btn btn-danger" type="button">x</a>
+    </div>
+    <div class="main">
+        <div class="aside">
+            <div>
+                <span>文件操作</span>
+                <ul>
+                    <li type="button" class=" btn btn-primary">新建</li>
+                    <li type="button" class=" btn btn-info">保存</li>
+                    <li type="button" class=" btn btn-success icon-houtui iconfont" style="width:50px;"></li>
+                </ul>
+            </div>
+            <div>
+                <span>画图工具</span>
+                <ul>
+                    <li class="icon-line iconfont" data-role="line"></li>
+                    <li class="icon-agongjutianjiajuxing iconfont" data-role="rect"></li>
+                    <li class=" icon-yuan iconfont" data-role="arc"></li>
+                    <li class=" icon-pan iconfont" data-role="pen"></li>
+                    <li class="icon-iconfontwubianxing iconfont" data-role="bian"></li>
+                    <li class="icon-wujiaoxing iconfont" data-role="jiao"></li>
+                    <li class="icon-xiangpica iconfont" aa="bb"></li>
+                    <li class="icon-caijian iconfont"></li>
+
+                </ul>
+                <ul class="daxiao">
+                    <li>
+                        <p>边数：</p>
+                        <input type="range" name="points" min="1" max="20" value="5" style="width: 120px;height:30px;" data-role="bianNum"/>
+                    </li>
+                    <li>
+                        <p >角数：</p>
+                        <input type="range" name="points" min="1" max="20" value="5" style="width: 120px;height:24px;" data-role="jiaoNum"/>
+                    </li>
+                    <li>
+                        <p style="margin-top: -5px">橡皮：</p>
+                        <input type="range" name="points" min="1" max="100" value="10" style="width: 120px;height:18px;"/>
+                    </li>
+                    <li>
+                        <p style="margin-top: -5px">粗细：</p>
+                        <input type="range" name="points" min="1" max="50" value="1" style="width: 120px;height:18px;" />
+                    </li>
+
+                </ul>
+            </div>
+            <div>
+                <span>画图方式</span>
+                <ul>
+                    <li type="button" class="btn btn-info" data-role="stroke">描边</li>
+                    <li type="button" class="btn btn-primary" data-role="fill">填充</li>
+                </ul>
+            </div>
+            <div>
+                <span>颜色</span>
+                <ul>
+                    <li >描边
+                        <input type="color" style="width:30px;" data-role="border">
+                    </li>
+                    <li>填充
+                        <input type="color" style="width:30px;" data-role="fill">
+                    </li>
+
+
+                </ul>
+            </div>
+            <div>
+                <span>图像处理</span>
+                <ul>
+                    <li><a href=""><input type="file">选择文件</a></li>
+                </ul>
+                <p>
+                    <strong type="button" class=" btn btn-primary" data-role="blur">模糊</strong>
+                    <strong type="button" class=" btn btn-success" data-role="m">马赛克</strong>
+                    <strong type="button" class=" btn btn-info" data-role="fx">反色</strong>
+                </p>
+            </div>
+            <!--<div>后退</div>-->
+        </div>
+        <div class="canvas-box">
+            <canvas></canvas>
+            <div class="copy"></div>
+            <div class="xp"></div>
+            <div class="selectarea"></div>
+        </div>
+        <img src="" alt="">
+
+    </div>
+</div>
+</body>
+<script>
+    window.onload=function(){
+        var canvasBox=document.querySelector(".canvas-box");
+        var canvasBoxW=canvasBox.offsetWidth;
+        var img=document.querySelector("img");
+        var canvasBoxH=canvasBox.offsetHeight;
+        var canvas=document.querySelector("canvas");
+        var cobj=canvas.getContext("2d");
+        var copy=document.querySelector(".copy");
+        canvas.width=canvasBoxW;
+        canvas.height=canvasBoxH;
+        $(".nav a").click(function(){
+            close()
+        })
+        var drawObj=new shape(canvas,copy,cobj);
+//        画图
+        $(".aside div:nth-child(2) ul li").click(function(){
+            var fn=$(this).attr("data-role");
+            if(fn!=="pen") {
+                drawObj.type = fn;
+                drawObj.draw();
+
+            }else{
+                drawObj.pen();
+            }
+//            if(fn=="bian") {
+//                drawObj.bianNum=prompt("请输入边数",5);
+//            }
+//            if(fn=="jiao") {
+//                drawObj.jiaoNum=prompt("请输入边数",5);
+//            }
+        });
+//        描边颜色
+        $(".aside div:nth-child(4) ul li:nth-child(1) input").change(function(){
+            drawObj[$(this).attr("data-role")]=$(this).val();
+            drawObj.draw();
+        })
+//        填充颜色
+        $(".aside div:nth-child(4) ul li:nth-child(2) input").change(function(){
+            drawObj[$(this).attr("data-role")]=$(this).val();
+            drawObj.draw();
+        })
+        //        画图方式
+        $(".aside div:nth-child(3) ul li").click(function(){
+            var fn=$(this).attr("data-role");
+            drawObj.style=fn;
+            drawObj.draw();
+        })
+        //        线条粗细
+        $(".aside div:nth-child(2) .daxiao li:nth-child(4) input").change(function(){
+            var num=drawObj[$(this).attr("data-role")]=$(this).val();
+            drawObj.linew =num
+            drawObj.draw();
+
+        })
+//        边数
+        $(".aside div:nth-child(2) .daxiao li:nth-child(1) input").change(function(){
+            var num=drawObj[$(this).attr("data-role")]=$(this).val();
+            drawObj.bianNum =num
+            drawObj.draw();
+
+        })
+//        角数
+        $(".aside div:nth-child(2) .daxiao li:nth-child(2) input").change(function(){
+            var num=drawObj[$(this).attr("data-role")]=$(this).val();
+            drawObj.bianNum =num
+            drawObj.draw();
+
+        })
+//        文件
+        $(".aside div:nth-child(1) ul li").click(function(){
+            var index=$(".aside div:nth-child(1) ul li").index(this);
+            if(index==0){
+                if(drawObj.historys.length>0){
+                    var yes=confirm("是否保存");
+                    if(yes){
+                        var url=canvas.toDataURL();
+                        var newurl=url.replace("image/png","stream/octet")
+                        location.href=newurl;
+                    }
+                }
+                cobj.clearRect(0,0,canvas.width,canvas.height);
+                drawObj.historys=[];
+            }else if(index==1){
+                var url=canvas.toDataURL();
+                var newurl=url.replace("image/png","stream/octet")
+                location.href=newurl;
+//
+            }else if(index==2){
+                if(drawObj.historys.length==0){
+//                    //no
+                    cobj.clearRect(0,0,canvas.width,canvas.height);
+                    setTimeout(function(){
+                        alert("不能返回");
+                    },10)
+                }else{
+                    if (drawObj.isback) {
+                        if (drawObj.historys.length == 1) {
+                            drawObj.historys.pop();
+                            cobj.clearRect(0, 0, canvas.width, canvas.height);
+                        } else {
+                            drawObj.historys.pop();
+                            cobj.putImageData(drawObj.historys.pop(), 0, 0);
+                        }
+                    } else {
+                        cobj.putImageData(drawObj.historys.pop(), 0, 0);
+                    }
+
+                    drawObj.isback = false;
+
+                }
+            }
+        })
+//        橡皮
+        $(".aside div:nth-child(2) ul li:nth-child(7)").click(function(){
+            var xpobj=$(".xp");
+            drawObj.xp(xpobj);
+            drawObj.isshowxp=true;
+//            $(".menu>ul>li:eq(6) input").val=drawObj.xpsize;
+        })
+        $(".aside div:nth-child(2) .daxiao li:nth-child(3) input").change(function(){
+            drawObj.xpsize=$(this).val();
+            $(".xp").css({
+                width:$(this).val()+"px",
+                height:$(this).val()+"px"
+            })
+        })
+
+       $(".aside div:nth-child(2) ul li").not($(".icon-xiangpica")).click(function(){
+           $(".xp").css("display","none");
+           drawObj.isshowxp=false;
+           $(".selectarea").css("display","none");
+        })
+
+         //        图像处理
+        $(".aside div:nth-child(5) ul li input").change(function(){
+            var fileObj=this.files[0];
+            var reader=new FileReader();
+            reader.readAsDataURL(fileObj);
+            reader.onload=function(e){
+                img.src= e.target.result;
+                cobj.drawImage(img,0,0,canvas.width,canvas.height)
+                dataobj=cobj.getImageData(0,0,canvas.width,canvas.height);
+            }
+        })
+        var lis=$(".aside div:nth-child(5) p strong").click(function(){
+            var attr=$(this).attr("data-role")
+            if(attr=="blur"){
+                blur(dataobj,5,0,0)
+            }else if(attr=="fx"){
+                fx(dataobj,0,0)
+            }else if(attr=="m"){
+                m(dataobj,50,0,0)
+            }
+        })
+        /*马赛克*/
+        function m(dataobj,num,x,y) {
+            var width = dataobj.width, height = dataobj.height;
+            var num = num;
+            var w = width / num;
+            var h = height / num;
+            for (var i = 0; i < num; i++) {//行
+                for (var j = 0; j < num; j++) {//列  x
+                    var dataObj = cobj.getImageData(j * w, i * h, w, h);
+
+                    var r = 0, g = 0, b = 0;
+                    for (var k = 0; k < dataObj.width * dataObj.height; k++) {
+                        r += dataObj.data[k * 4 + 0];
+                        g += dataObj.data[k * 4 + 1];
+                        b += dataObj.data[k * 4 + 2];
+                    }
+
+                    r = parseInt(r / (dataObj.width * dataObj.height));
+                    g = parseInt(g / (dataObj.width * dataObj.height));
+                    b = parseInt(b / (dataObj.width * dataObj.height));
+                    console.log(r + "--" + g + "--" + b);
+
+                    for (var k = 0; k < dataObj.width * dataObj.height; k++) {
+                        dataObj.data[k * 4 + 0] = r;
+                        dataObj.data[k * 4 + 1] = g;
+                        dataObj.data[k * 4 + 2] = b;
+                    }
+
+
+                    cobj.putImageData(dataObj, x + j * w, y+i * h);
+
+                }
+
+            }
+
+        }
+
+
+
+
+        /*模糊*/
+        function blur(dataobj,num,x,y) {
+            var width = dataobj.width, height = dataobj.height;
+            var arr=[];
+            var num = num;
+            for (var i = 0; i < height; i++) {//行
+                for (var j = 0; j < width; j++) {//列  x
+                    var x1=j+num>width?j-num:j;
+                    var y1=i+num>height?i-num:i;
+                    var dataObj = cobj.getImageData(x1, y1,num, num);
+
+                    var r = 0, g = 0, b = 0;
+                    for (var k = 0; k < dataObj.width * dataObj.height; k++) {
+                        r += dataObj.data[k * 4 + 0];
+                        g += dataObj.data[k * 4 + 1];
+                        b += dataObj.data[k * 4 + 2];
+                    }
+
+                    r = parseInt(r / (dataObj.width * dataObj.height));
+                    g = parseInt(g / (dataObj.width * dataObj.height));
+                    b = parseInt(b / (dataObj.width * dataObj.height));
+
+                    arr.push(r,g,b,255);
+
+                }
+
+            }
+
+            for(var i=0;i<dataobj.data.length;i++){
+                dataobj.data[i]=arr[i]
+            }
+            cobj.putImageData(dataobj,x,y);
+
+        }
+
+
+         //反色
+        function fx(dataobj,x,y){
+            for(var i=0;i<dataobj.width*dataobj.height;i++){
+                dataobj.data[i*4+0]=255-dataobj.data[i*4+0];
+                dataobj.data[i*4+1]=255-dataobj.data[i*4+1];
+                dataobj.data[i*4+2]=255-dataobj.data[i*4+2];
+                dataobj.data[i*4+3]=255
+
+            }
+
+            cobj.putImageData(dataobj,x,y);
+        }
+
+        $(".aside div:nth-child(2) ul li:nth-child(8)").click(function(){
+            drawObj.select($(".selectarea"));
+//            $(".menu-list:last-child").css({color:"#000"}).css("text-shadow","0 0 3px #000");
+            selectarea.style.border="1px dotted #000";
+        })
+
+
+
+    }
+</script>
+</html>
