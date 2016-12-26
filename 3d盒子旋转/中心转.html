@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.1.0.js"></script>
+    <link rel="stylesheet" href="one.css">
+    <style>
+        .dabox{
+            width:800px;
+            height:400px;
+            border:1px solid #ccc;
+            position: absolute;
+            left:0;
+            right:0;
+            top:0;
+            bottom:0;
+            margin:auto;
+            perspective: 1000px;
+            perspective-origin: bottom;
+        }
+    </style>
+</head>
+<body>
+<div class="dabox">
+
+</div>
+</body>
+<script>
+    var dabox=document.querySelector('.dabox');
+    var heights=parseInt(getComputedStyle(dabox,null).height);
+    var widths=parseInt(getComputedStyle(dabox,null).width);
+    var nums=2;
+    var arr=[];
+    for(var i=0; i<nums;i++){
+//      创建场景
+        var scren=document.createElement('div');
+        scren.style.cssText="width:100%;height:"+heights/nums+"px;position:absolute;left:0;top:"+(i*(heights/nums))+"px";
+//        创建盒子
+        var box=document.createElement('div');
+        box.style.cssText="width:100%;height:100%;position:absolute;left:0;top:0;transform-style:preserve-3d;transition:transform 2s ease "+(i*0.3)+"s;transform-origin:center center -400px;"
+        for(var j=0;j<6;j++){
+            var pan1=document.createElement('div');
+            pan1.style.cssText="position:absolute;left:0;top:0;background:#000";
+            if(j==0){
+                pan1.style.width=widths+"px";
+                pan1.style.height=widths+"px";
+                pan1.style.transformOrigin="top";
+                pan1.style.transform="rotateX(-90deg)";
+
+            }
+            else if(j==1){
+                pan1.style.width="100%";
+                pan1.style.height=heights/nums+"px";
+                pan1.style.transformOrigin="left";
+                pan1.style.transform="rotateY(90deg)";
+                pan1.style.background="url(1.jpg) no-repeat 0 "+-i*(heights/nums)+"px";
+            }
+            else if(j==2){
+                pan1.style.width="100%";
+                pan1.style.height=heights/nums+"px";
+                pan1.style.transformOrigin="right";
+                pan1.style.transform="rotateY(-90deg)";
+                pan1.style.background="url(2.jpg) no-repeat 0 "+-i*(heights/nums)+"px";
+            }
+            else if(j==3){
+                pan1.style.width="100%";
+                pan1.style.height=heights/nums+"px";
+                pan1.style.background="url(3.jpg) no-repeat 0 "+-i*(heights/nums)+"px";
+            }
+            else if(j==4){
+                pan1.style.width="100%";
+                pan1.style.height=widths+"px";
+                pan1.style.transformOrigin="bottom";
+                pan1.style.top=-(widths-heights/nums)+"px";
+                pan1.style.transform="rotateX(90deg)";
+
+
+            }
+            else if(j==5){
+                pan1.style.width=widths+"px";
+                pan1.style.height=heights/nums+"px";
+                pan1.style.transform="translateZ(-800px)";
+                pan1.style.background="url(4.jpg) no-repeat 0 "+-i*(heights/nums)+"px";
+            }
+
+            box.appendChild(pan1)
+
+        }
+        scren.appendChild(box);
+        dabox.appendChild(scren);
+
+        arr.push(box)
+    }
+    setInterval(function(){
+        for(var a=0;a<arr.length;a++){
+            if(a<5){
+                arr[a].style.animation="one "+a*0.8+"s ease"
+            }else{
+                arr[a].style.animation="one "+(8-a*0.8)+"s ease"
+            }
+        }
+    },1000);
+
+    //    执行动画
+//    var init=0;
+//    var t=setInterval(move,5000);
+//    function move(){
+//        init+=90;
+//        for(var i=0; i<arr.length;i++){
+//            arr[i].style.transform="rotateY("+init+"deg)"
+//        }
+//    }
+//
+//    $(window).focus(function(){
+//        t=setInterval(move,5000);
+//    });
+//    $(window).blur(function(){
+//        clearInterval(t);
+//    })
+
+</script>
+</html>

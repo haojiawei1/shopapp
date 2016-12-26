@@ -1,0 +1,17 @@
+.for(@i:0) when (@i<=100) {
+  @s:@i*1%;
+  .one();
+  .one() when (@i<50) {
+    @{s}{
+      transform: rotateY(@i*0.9deg) scale(1-10/100/10*@i,1-10/100/10*@i);
+
+    }
+  }
+  .one() when (@i>50){
+    @{s}{
+      transform:rotateY(@i*0.9deg) scale(10/100/10*@i,10/100/10*@i);
+    }
+  }
+  .for(@i+1);
+}
+.for();

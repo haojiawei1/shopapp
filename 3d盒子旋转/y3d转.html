@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.1.0.js"></script>
+    <style>
+        .dabox{
+            width:800px;
+            height:400px;
+            border:1px solid #ccc;
+            position: absolute;
+            top:0;
+            bottom:0;
+            left:0;
+            right:0;
+            margin:auto;
+        }
+        html body{
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<div class="dabox"></div>
+</body>
+<script>
+    var dabox=document.querySelector('.dabox')
+    var widths=parseInt(getComputedStyle(dabox,null).width);
+    var heights=parseInt(getComputedStyle(dabox,null).height);
+    var arr=[]
+    var nums=4;
+    for(var i=0;i<nums;i++){
+          var scren=document.createElement('div');
+          scren.style.cssText="width:"+widths/nums+"px;height:100%;position:absolute;top:0;left:"+(i*(widths/nums))+"px";
+           var box=document.createElement('div');
+        box.style.cssText="width:100%;height:100%;position:absolute;left:0;top:0;transform-style:preserve-3d;transition:transform 2s ease "+(i*0.3)+"s;transform-origin:center center -200px";
+        for(var j=0;j<6;j++){
+            var span1=document.createElement('div');
+            span1.style.cssText="position:absolute;left:0;top:0;"
+            if(j==0){
+                span1.style.width=heights+"px";
+                span1.style.heights=heights+"px";
+                span1.style.transformOrigin="left";
+                span1.style.transform="rotateY(90deg)";
+            }
+            else if(j==1){
+                span1.style.width=heights+"px";
+                span1.style.height=heights+"px";
+                span1.style.transformOrigin="right";
+                span1.style.transform="rotate(-90deg)";
+            }
+            else if(j==2){
+                span1.style.width=widths/nums+"px";
+                span1.style.height="100%"
+                span1.style.transform="translateZ(-400px)";
+                span1.style.background="url(1.jpg) no-repeat "+-i*(widths/nums)+"px 0";
+            }
+            else if(j==3){
+                span1.style.width=widths/nums+"px";
+                span1.style.height="100%";
+                span1.style.background="url(2.jpg) no-repeat "+-i*(widths/nums)+"px 0";
+            }
+            else if(j==4){
+                span1.style.width=widths/nums+"px";
+                span1.style.height="100%";
+                span1.style.transformOrigin="top";
+                span1.style.transform="rotateX(-90deg)"
+                span1.style.background="url(3.jpg) no-repeat "+-i*(widths/nums)+"px 0";
+            }
+            else if(j==5){
+                span1.style.width=widths/nums+"px";
+                span1.style.height="100%";
+                span1.style.transformOrigin="bottom";
+                span1.style.transform="rotateX(90deg)";
+                span1.style.background="url(4.jpg) no-repeat "+-i*(widths/nums)+"px 0";
+            }
+            box.appendChild(span1);
+        }
+
+    scren.appendChild(box)
+    dabox.appendChild(scren)
+    arr.push(box)
+    }
+    var init=0;
+    var t=setInterval(move,5000);
+       function move(){
+        init+=90;
+        for(var i=0; i<arr.length;i++){
+            arr[i].style.transform="rotateX("+init+"deg)"
+        }
+    }
+
+    $(window).focus(function(){
+        t=setInterval(move,5000);
+    });
+    $(window).blur(function(){
+        clearInterval(t);
+    })
+
+</script>
+</html>
