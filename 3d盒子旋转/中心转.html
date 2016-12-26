@@ -30,7 +30,7 @@
     var dabox=document.querySelector('.dabox');
     var heights=parseInt(getComputedStyle(dabox,null).height);
     var widths=parseInt(getComputedStyle(dabox,null).width);
-    var nums=2;
+    var nums=9;
     var arr=[];
     for(var i=0; i<nums;i++){
 //      创建场景
@@ -100,24 +100,27 @@
                 arr[a].style.animation="one "+(8-a*0.8)+"s ease"
             }
         }
-    },1000);
+    },300);
 
     //    执行动画
-//    var init=0;
-//    var t=setInterval(move,5000);
-//    function move(){
-//        init+=90;
-//        for(var i=0; i<arr.length;i++){
-//            arr[i].style.transform="rotateY("+init+"deg)"
-//        }
-//    }
-//
-//    $(window).focus(function(){
-//        t=setInterval(move,5000);
-//    });
-//    $(window).blur(function(){
-//        clearInterval(t);
-//    })
+    var init=0;
+    var t=setInterval(move,5000);
+    function move(){
+        init+=90;
+        for(var i=0; i<arr.length;i++){
+            arr[i].style.transform="rotateY("+init+"deg)"
+        }
+    }
 
+    $(window).focus(function(){
+        t=setInterval(move,5000);
+    });
+    $(window).blur(function(){
+        clearInterval(t);
+    })
+    console.log(1+ "2"+"2");
+    console.log(1+ +"2"+"2");
+    console.log("A"- "B"+"2");
+    console.log("A"- "B"+2);
 </script>
 </html>
