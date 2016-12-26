@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		 <script type="text/javascript">
+        function resize(originSize,type){
+            var type=type||"x";
+            if(type=="x"){
+                var widths=document.documentElement.clientWidth;
+                var scale=widths/originSize*100;
+            }else if(type=="y"){
+                var heights=document.documentElement.clientHeight;
+                var scale=heights/originSize*100;
+            }
+
+            document.getElementsByTagName("html")[0].style.fontSize=scale+"px"
+        }
+        window.onload=function(){
+            resize(750);
+        }
+    </script>
+    <link rel="stylesheet" href="css/vip.css" />
+	</head>
+	<body>
+		<div class="vip-ka">
+			<a href=""><img src="img/y.png" alt="" /></a>
+		</div>
+		<div class="fukuan">
+			<div class="yanzhengma">
+					<a href=""><img src="img/g1.jpg" alt="" /></a>	
+			</div>
+			<div class="qian">
+			       <a href=""><img src="img/g2.jpg" alt="" /></a> 
+			</div>
+		</div>
+		<div class="vip-lie">
+			<ul>
+				<li><a href=""><img src="img/ccc1.jpg" alt="" /></a></li>
+				<li><a href=""><img src="img/ccc2.jpg" alt="" /></a></li>
+				<li><a href=""><img src="img/ccc3.jpg" alt="" /></a></li>
+				<li><a href=""><img src="img/ccc4.jpg" alt="" /></a></li>
+				<li><a href=""><img src="img/ccc5.jpg" alt="" /></a></li>
+				<li><a href=""><img src="img/ccc6.png" alt="" /></a></li>
+				<li><a href=""><img src="img/ccc7.png" alt="" /></a></li>
+			</ul>
+		</div>
+		<div style="height: 1.1rem;"></div>
+<div class="foot">
+    <ul>
+        <li><a href="index.html"><img src="img/o1.png" alt=""></a></li>
+        <li><a href="vip.html"><img src="img/o2.png" alt=""></a></li>
+        <li><a href="#"><img src="img/o3.png" alt=""></a></li>
+        <li><a href="gouwuche.html"><img src="img/o4.png" alt=""></a></li>
+        <li><a href="login.html"><img src="img/o5.png" alt=""></a></li>
+    </ul>
+</div>
+	</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <script type="text/javascript">
+        function resize(originSize,type){
+            var type=type||"x";
+            if(type=="x"){
+                var widths=document.documentElement.clientWidth;
+                var scale=widths/originSize*100;
+            }else if(type=="y"){
+                var heights=document.documentElement.clientHeight;
+                var scale=heights/originSize*100;
+            }
+
+            document.getElementsByTagName("html")[0].style.fontSize=scale+"px"
+        }
+        window.onload=function(){
+            resize(750);
+        }
+    </script>
+    <script src="js/jquery.js"></script>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/xiangqing.css">
+</head>
+<body>
+<header>
+    <div class="logo"></div>
+    <div class="form">
+        <input type="text" placeholder="寻找宝贝">
+        <span></span>
+    </div>
+    <div class="more">
+        <a href="more.html">
+        <img src="img/lm.png" alt="">
+        </a>
+    </div>
+</header>
+<div class="con">
+    <div class="top">
+        <div><img src="img/1451900630.jpg" alt=""></div>
+        <div class="xinxi">
+            <p>陌森2016新款太阳镜杨幂明星同款墨镜 MS6000</p>
+            <p> 女士偏光太阳镜潮</p>
+            <p>靓视价：￥498.00</p>
+            <p></p>
+        </div>
+    </div>
+    <div class="content">
+        <div class="sel">选择您要的商品信息</div>
+        <div class="col">
+            <span>颜色分类</span>
+            <div class="pic"><img src="img/1451900630.jpg" alt=""></div>
+            <div class="add">
+                <div class="add1">加入购物车</div>
+            </div>
+        </div>
+    </div>
+    <div class="xiangqing">
+        <ul class="xx">
+            <li class="active">商品详情</li>
+            <li>评论</li>
+        </ul>
+        <div class="pic1">
+            <ul>
+                <li><img src="img/1448099927.jpg" alt=""></li>
+                <li><img src="img/1448103970.jpg" alt=""></li>
+                <li><img src="img/1448100297.jpg" alt=""></li>
+                <li><img src="img/1448103599.jpg" alt=""></li>
+                <li><img src="img/1448103970.jpg" alt=""></li>
+            </ul>
+        </div>
+        <div class="pic2"></div>
+    </div>
+</div>
+<div style="height: 1.1rem;"></div>
+<div class="foot">
+    <ul>
+        <li><a href="index.html"><img src="img/o1.png" alt=""></a></li>
+        <li><a href="vip.html"><img src="img/o2.png" alt=""></a></li>
+        <li><a href="#"><img src="img/o3.png" alt=""></a></li>
+        <li><a href="gouwuche.html"><img src="img/o4.png" alt=""></a></li>
+        <li><a href="login.html"><img src="img/o5.png" alt=""></a></li>
+    </ul>
+</div>
+<div class="fanhui">
+    <img src="img/top.png" alt="">
+</div>
+</body>
+</html>

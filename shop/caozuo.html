@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="css/caozuo.css">
+    <script type="text/javascript">
+        function resize(originSize,type){
+            var type=type||"x";
+            if(type=="x"){
+                var widths=document.documentElement.clientWidth;
+                var scale=widths/originSize*100;
+            }else if(type=="y"){
+                var heights=document.documentElement.clientHeight;
+                var scale=heights/originSize*100;
+            }
+
+            document.getElementsByTagName("html")[0].style.fontSize=scale+"px"
+        }
+        window.onload=function(){
+            resize(750);
+        }
+    </script>
+	</head>
+	<body>
+		<div class="vip-ka">
+			<a href=""><img src="img/y.png" alt="" /></a>
+		</div>
+		<div class="mycaozuo">
+			<ul>
+				<li>
+					<a href="">
+						<p>卡券包</p>
+						<span>0</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+							<p>电子包</p>
+						<span>0</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+							<p>积分</p>
+						<span>0</span>
+					</a>
+				</li>
+				<li>
+					<a href="">	<p>余额</p>
+						<span>0</span></a>
+				</li>
+			</ul>
+		</div>
+		<div class="dingdan">
+			<div class="mydd">
+				<img src="img/y1.jpg" alt="" />
+			</div>
+			<div class="chakan">
+				<span>查看购买的宝贝></span>
+			</div>
+		</div>
+		<div class="xuanxiang">
+			<ul>
+				<li>
+					<img src="img/c1.png" alt="" />
+				</li>
+				<li>
+					<a href=""><img src="img/c2.png" alt="" /></a>
+				</li>
+				<li>
+				    <a href=""><img src="img/c3.png" alt="" /></a>
+				</li>
+				<li>
+					<a href=""><img src="img/c4.png" alt="" /></a>
+				</li>
+				<li>
+					<a href=""><img src="img/c5.png" alt="" /></a>
+				</li>
+			</ul>
+		</div> 
+		<ul class="caozuo-lie">
+			<li>
+				<a href=""><img src="img/cc1.png" alt="" /></a>
+			</li>
+			<li>
+				<a href=""><img src="img/cc2.png" alt="" /></a>
+			</li>
+			<li>
+				<a href=""><img src="img/cc3.png" alt="" /></a>
+			</li>
+		</ul>
+<div class="foot">
+    <ul>
+        <li><a href="index.html"><img src="img/o1.png" alt=""></a></li>
+        <li><a href="vip.html"><img src="img/o2.png" alt=""></a></li>
+        <li><a href="kefu.html"><img src="img/o3.png" alt=""></a></li>
+        <li><a href="gouwuche.html"><img src="img/o4.png" alt=""></a></li>
+        <li><a href="login.html"><img src="img/o5.png" alt=""></a></li>
+    </ul>
+</div>
+	</body>
+</html>

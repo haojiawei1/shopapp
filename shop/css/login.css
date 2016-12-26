@@ -1,0 +1,146 @@
+*{
+    padding:0;
+    margin:0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+body,html{
+    width:100%;
+    height:100%;
+    font-family: "HanHei SC", PingHei, "PingFang SC", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.con{
+    width:100%;
+    height:100%;
+    /*background:url("../img/xm.png");*/
+}
+.top{
+    width:100%;
+    height:1rem;
+    padding-left:0.2rem;
+    line-height: 1rem;
+    color: #fff;
+    box-sizing: border-box;
+    background: #1EA6FE;
+    position: relative;
+}
+.top a{
+	    font-size: 0.5rem;
+	    color: #fff;
+	    float: left;
+}
+.top span{
+	text-align: center;
+	display: block;
+	float: left;
+	width: 1rem;
+	line-height: 1rem;
+	font-size: 0.4rem;
+	position: absolute;
+	left:0;
+	right: 0;
+	margin: auto;
+}
+.logo{
+    width:2rem;
+    height:2rem;
+    position: absolute;
+    top:15%;
+    left:35%;
+    border-radius:50%;
+    background: #fff;
+    background: #1EA6FE;
+    line-height: 2.2rem;
+    text-align: center;
+}
+.logo img{
+	width: 50%;
+	height: 50%;
+}
+.con-body{
+    position: absolute;
+    top:30%;
+    left:0;
+    width:100%;
+}
+.con-body h4{
+    color: #fff;
+    text-align: center;
+}
+form div{
+    width:90%;
+    height:1.2rem;
+    margin:0.5rem auto;
+    border:1px solid #1EA6FE;
+    border-radius: 0.2rem;
+
+}
+form .denglu{
+    background: rgba(0,0,0,0);
+    border:0;
+}
+.denglu input{
+    width:100%;
+    height:100%;
+    list-style: none;
+    background: #FF5B1C;
+    border:0;
+    border-radius: 0.2rem;
+    outline: inherit;
+    font-size: 0.4rem;
+    color: #fff;
+    letter-spacing:0.2rem;
+}
+.user span{
+    font-size: 0.6rem;
+    width:20%;
+    height:100%;
+    display:block;
+    line-height: 1.2rem;
+    color: #1EA6FE;
+    float: left;
+    text-align: center;
+}
+.user input{
+    width:79%;
+    height:100%;
+    display: block;
+    background: rgba(0,0,0,0);
+    border:0;
+    float: right;
+    outline-color:rgba(0,0,0,0) ;
+    font-size: 0.4rem;
+    color: #000;
+    /*padding-left:rem;*/
+    box-sizing: border-box;
+}
+.edit{
+	width: 100%;
+	height: 1.5rem;
+	position: absolute;
+	bottom: 1.5rem;
+}
+.edit li{
+	float: left;
+	width: 1.5rem;
+	margin-left: 0.7rem;
+	height: 100%;
+
+	/*border: 1px solid #1EA6FE;*/
+	line-height: 1.5rem;
+	
+}
+.edit a{
+	font-size: 1.2rem;
+    text-align: center;
+	color: #1EA6FE;
+	display: block;
+}
+.edit .icon-weibo{
+	margin-top: 0.1rem;
+}
+
+
+

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <script type="text/javascript">
+        function resize(originSize,type){
+            var type=type||"x";
+            if(type=="x"){
+                var widths=document.documentElement.clientWidth;
+                var scale=widths/originSize*100;
+            }else if(type=="y"){
+                var heights=document.documentElement.clientHeight;
+                var scale=heights/originSize*100;
+            }
+
+            document.getElementsByTagName("html")[0].style.fontSize=scale+"px"
+        }
+        window.onload=function(){
+            resize(750);
+        }
+    </script>
+    <script src="js/jquery.js"></script>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/more.css">
+</head>
+<body>
+<header>
+    <a href="#" onClick="javascript :history.back(-1)"><</a>
+    分类项目
+</header>
+<div class="con">
+    <ul>
+        <li>
+
+            <div class="lie"><img src="img/1452829719.png" alt=""></div>
+            <span>隐形美瞳</span>
+             <div class="yin">
+                 <p><a href="">美瞳</a><a href="">眼睛</a><a href="">波轮式</a><a href="">强生</a></p>
+                 <p><a href="">美瞳</a><a href="">眼睛</a></p>
+             </div>
+        </li>
+        <li>
+            <div class="lie"><img src="img/1452832095.png" alt=""></div>
+            <span>护理液</span>
+            <div class="yin">
+                <p><a href="">美瞳</a><a href="">眼睛</a><a href="">波轮式</a><a href="">强生</a></p>
+                <p><a href="">美瞳</a><a href="">眼睛</a></p>
+            </div>
+        </li>
+        <li>
+            <div class="lie"><img src="img/1452832275.png" alt=""></div>
+            <span>太阳眼镜</span>
+            <div class="yin">
+                <p><a href="">美瞳</a><a href="">眼睛</a><a href="">波轮式</a><a href="">强生</a></p>
+                <p><a href="">美瞳</a><a href="">眼睛</a></p>
+            </div>
+        </li>
+        <li>
+            <div class="lie"><img src="img/1452832594.png" alt=""></div>
+            <span>框架眼镜</span>
+            <div class="yin">
+                <p><a href="">美瞳</a><a href="">眼睛</a><a href="">波轮式</a><a href="">强生</a></p>
+                <p><a href="">美瞳</a><a href="">眼睛</a></p>
+            </div>
+        </li>
+        <li>
+            <div class="lie"><img src="img/1452837778.png" alt=""></div>
+            <span>老化眼镜</span>
+            <div class="yin">
+                <p><a href="">美瞳</a><a href="">眼睛</a><a href="">波轮式</a><a href="">强生</a></p>
+                <p><a href="">美瞳</a><a href="">眼睛</a></p>
+            </div>
+        </li>
+        <li>
+            <div class="lie"><img src="img/1452838039.png" alt=""></div>
+            <span>品牌眼镜</span>
+            <div class="yin">
+                <p><a href="">美瞳</a><a href="">眼睛</a><a href="">波轮式</a><a href="">强生</a></p>
+                <p><a href="">美瞳</a><a href="">眼睛</a></p>
+            </div>
+        </li>
+        <li>
+            <div class="lie"><img src="img/1452838630.png" alt=""></div>
+            <span>儿童眼镜</span>
+            <div class="yin">
+                <p><a href="">美瞳</a><a href="">眼睛</a><a href="">波轮式</a><a href="">强生</a></p>
+                <p><a href="">美瞳</a><a href="">眼睛</a></p>
+            </div>
+        </li>
+        <li>
+            <div class="lie"><img src="img/1452837778.png" alt=""></div>
+            <span>功能眼镜</span>
+            <div class="yin">
+                <p><a href="">美瞳</a><a href="">眼睛</a><a href="">波轮式</a><a href="">强生</a></p>
+                <p><a href="">美瞳</a><a href="">眼睛</a></p>
+            </div>
+        </li>
+        <li>
+            <div class="lie"><img src="img/1452838039.png" alt=""></div>
+            <span>护理工具</span>
+            <div class="yin">
+                <p><a href="">美瞳</a><a href="">眼睛</a><a href="">波轮式</a><a href="">强生</a></p>
+                <p><a href="">美瞳</a><a href="">眼睛</a></p>
+            </div>
+        </li>
+    </ul>
+</div>
+<div style="height: 1.1rem;"></div>
+<div class="foot">
+    <ul>
+        <li><a href="index.html"><img src="img/o1.png" alt=""></a></li>
+        <li><a href="vip.html"><img src="img/o2.png" alt=""></a></li>
+        <li><a href="#"><img src="img/o3.png" alt=""></a></li>
+        <li><a href="gouwuche.html"><img src="img/o4.png" alt=""></a></li>
+        <li><a href="login.html"><img src="img/o5.png" alt=""></a></li>
+    </ul>
+</div>
+<div class="fanhui">
+    <img src="img/top.png" alt="">
+</div>
+</body>
+<script>
+    $(".con li").click(function(){
+        $(this).find(".yin").slideToggle()
+    })
+
+</script>
+</html>

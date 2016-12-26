@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="css/index.css">
+    <script type="text/javascript">
+        function resize(originSize,type){
+            var type=type||"x";
+            if(type=="x"){
+                var widths=document.documentElement.clientWidth;
+                var scale=widths/originSize*100;
+            }else if(type=="y"){
+                var heights=document.documentElement.clientHeight;
+                var scale=heights/originSize*100;
+            }
+
+            document.getElementsByTagName("html")[0].style.fontSize=scale+"px"
+        }
+        window.onload=function(){
+            resize(750);
+        }
+    </script>
+    <script src="css/swiper-3.4.0.min.js"></script>
+    <link rel="stylesheet" href="css/swiper-3.4.0.min.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/index.js"></script>
+    <style>
+
+    </style>
+</head>
+<body>
+<header>
+    <div class="logo"></div>
+    <div class="form">
+        <input type="text" placeholder="寻找宝贝">
+        <span>
+        	<img src="img/sousuo.png" alt="" />
+        </span>
+    </div>
+    <div class="more">
+        <a href="more.html">
+        <img src="img/lm.png" alt="">
+        </a>
+    </div>
+</header>
+<div class="con">
+    <section id="banner">
+        <div class="swiper-container" >
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/1449456252.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="img/1449456852.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="img/1449456252.jpg" alt=""></div>
+            </div>
+        </div>
+    </section>
+    <section class="nav">
+        <ul>
+            <li><a href="fenlei.html"><img src="img/a1.jpg" alt=""></a></li>
+            <li><a href="fenlei.html"><img src="img/2.jpg" alt=""></a></li>
+            <li><a href="fenlei.html"><img src="img/3.jpg" alt=""></a></li>
+            <li><a href="fenlei.html"><img src="img/4.jpg" alt=""></a></li>
+            <li><a href="fenlei.html"><img src="img/5.jpg" alt=""></a></li>
+            <li><a href="fenlei.html"><img src="img/6.jpg" alt=""></a></li>
+            <li><a href="fenlei.html"><img src="img/7.jpg" alt=""></a></li>
+            <li><a href="fenlei.html"><img src="img/8.jpg" alt=""></a></li>
+        </ul>
+    </section>
+    <section class="main1">
+        <div class="tbody">
+            <div><a href=""><img src="" alt=""></a></div>
+            <div><a href=""><img src="" alt=""></a></div>
+            <div><a href=""><img src="" alt=""></a></div>
+        </div>
+    </section>
+    <section class="main2">
+        <div class="tbody2"><img src="img/1441522798.jpg" alt=""></div>
+    </section>
+    <section class="main3">
+        <a href=""><img src="img/1447920435.jpg" alt=""></a>
+        <ul>
+            <li ><a href="">暴龙</a></li>
+            <li><a href="">帕莎</a></li>
+            <li><a href="">木九十</a></li>
+            <li><a href="">花花公子</a></li>
+            <li><a href="">福特</a></li>
+            <li><a href="">艾维斯</a></li>
+            <li><a href="">左纯</a></li>
+            <li><a href="">更多>></a></li>
+        </ul>
+    </section>
+    <section class="main3">
+        <a href=""><img src="img/1447921213.jpg" alt=""></a>
+        <ul>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+        </ul>
+    </section>
+    <section class="main3">
+        <a href=""><img src="img/1447921493.jpg" alt=""></a>
+        <ul>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+        </ul>
+    </section>
+
+</div>
+<div style="height: 1.1rem;"></div>
+<div class="foot">
+    <ul>
+        <li><a href="index.html"><img src="img/o1.png" alt=""></a></li>
+        <li><a href="vip.html"><img src="img/o2.png" alt=""></a></li>
+        <li><a href="#"><img src="img/o3.png" alt=""></a></li>
+        <li><a href="gouwuche.html"><img src="img/o4.png" alt=""></a></li>
+        <li><a href="login.html"><img src="img/o5.png" alt=""></a></li>
+    </ul>
+</div>
+<div class="fanhui">
+    <img src="img/top.png" alt="">
+</div>
+</body>
+<script>
+    var mySwiper = new Swiper('.swiper-container');
+</script>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <script type="text/javascript">
+        function resize(originSize,type){
+            var type=type||"x";
+            if(type=="x"){
+                var widths=document.documentElement.clientWidth;
+                var scale=widths/originSize*100;
+            }else if(type=="y"){
+                var heights=document.documentElement.clientHeight;
+                var scale=heights/originSize*100;
+            }
+
+            document.getElementsByTagName("html")[0].style.fontSize=scale+"px"
+        }
+        window.onload=function(){
+            resize(750);
+        }
+    </script>
+    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="font_pup9g12075j98uxr/iconfont.css">
+</head>
+<body>
+   <div class="con">
+
+       	<div class="top ">
+       		       <a href="javascript:history.go(-1)" class="iconfont icon-fanhui"></a>
+       	<span>登录</span>
+       </div>
+       <div class="logo">
+           <img src="img/logo.png" alt="">
+       </div>
+       <div class="con-body">
+           <form action="caozuo.html">
+               <div class="user">
+                   <span class="iconfont icon-yonghuming1"></span>
+                   <input type="text" placeholder="用户名或邮箱">
+               </div>
+               <div class="user">
+                   <span class="iconfont icon-mima"></span>
+                   <input type="password" placeholder="密码">
+               </div>
+               <div class="denglu">
+                   <input type="submit" value="登陆" >
+               </div>
+           </form>
+       </div>
+      <ul class="edit">
+        <li ><a href="" class="icon-weixin iconfont"></a></li>
+        <li ><a href="" class="iconfont icon-qq"></a></li>
+        <li ><a href="" class="icon-weibo iconfont"></a></li>
+       </ul>
+   </div>
+    
+</body>
+</html>

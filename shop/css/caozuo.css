@@ -1,0 +1,152 @@
+html,body{
+	width: 100%;
+	height: 100%;
+	font-family: "HanHei SC", PingHei, "PingFang SC", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+*{
+	margin: 0;
+	padding: 0;
+    list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.vip-ka{
+	width: 100%;
+	height: 4.3rem;
+	padding: 0.5rem;
+	padding-top: 0.1rem;
+	box-sizing: border-box;
+	padding-bottom: 0.2rem;
+}
+.vip-ka img{
+	width: 100%;
+	height: 100%;
+}
+
+.mycaozuo{
+	width: 100%;
+	height: 1.3rem;
+}
+.mycaozuo ul {
+	width: 100%;
+	height: 100%;
+}
+.mycaozuo ul li{
+	width: 25%;
+	height: 100%;
+	float: left;
+	font-size: 0.36rem;
+	background: #1EA5FF;
+}
+.mycaozuo ul li:nth-child(4){
+	background: #FF5C1C;
+}
+.mycaozuo ul li p{
+	width: 100%;
+	height: 50%;
+	color: #fff;
+	text-align: center;
+		line-height: 0.65rem;
+}
+.mycaozuo ul li span{
+	display: block;
+	width: 100%;
+	height: 50%;
+    text-align: center;
+    color: #fff;
+}
+
+.dingdan{
+	width: 100%;
+	height: 1rem;
+	border-bottom: 1px solid #F3F3F3;
+}
+.dingdan div{
+	width: 50%;
+	line-height: 100%;
+	float: left;
+	padding-left: 0.2rem;
+	box-sizing: border-box;
+}
+
+.dingdan .mydd img{
+	width: 60%;
+	height: 100%;
+	text-align: left;
+}
+.dingdan .chakan{
+
+	font-size: 0.3rem;
+	line-height: 1rem;
+}
+.xuanxiang{
+	width: 100%;
+	height: 1.5rem;
+    border-bottom: 1px solid #F3F3F3;
+}
+.xuanxiang ul{
+	width: 100%;
+	height: 100%;
+}
+.xuanxiang ul li{
+	width: 20%;
+	height: 100%;
+	float: left;
+    line-height:75px;
+    padding: 0.2rem;
+    box-sizing: border-box;
+}
+/*.xuanxiang ul li a{
+	display: block;
+	height: 100%;
+	width: 100%;
+}*/
+.xuanxiang  ul li img{
+	width: 100%;
+	height: 100%;
+	display: block;
+	text-align: center;
+}
+.caozuo-lie{
+	width: 100%;
+}
+.caozuo-lie li{
+	width: 100%;
+	height: 1.3rem;
+	padding-left: 0.2rem;
+	border-bottom: 1px solid #F3F3F3;
+}
+.caozuo-lie li a{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.caozuo-lie li img{
+	width: 100%;
+	/*height: 100%;*/
+}
+
+/*foot*/
+.foot{
+    width:100%;
+    height:1.1rem;
+    position: fixed;
+    bottom:0;
+    left:0;
+    background: #F6F6F7;
+}
+.foot ul{
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.foot li{
+    width:20%;
+    height:100%;
+    text-align: center;
+}
+.foot li img{
+    width:60%;
+    margin:0 auto;
+}

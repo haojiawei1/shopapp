@@ -1,0 +1,67 @@
+html,body{
+	width: 100%;
+	height: 100%;
+}
+*{
+	margin: 0;
+	padding: 0;
+    list-style: none;
+}
+.vip-ka{
+	width: 100%;
+	height: 4.3rem;
+	padding: 0.5rem;
+	padding-top: 0.1rem;
+	box-sizing: border-box;
+	padding-bottom: 0.2rem;
+}
+.vip-ka img{
+	width: 100%;
+	height: 100%;
+}
+.fukuan{
+	width: 100%;
+	height: 1.1rem;
+}
+.fukuan div{
+	width: 50%;
+	height: 100%;
+	float: left;
+	text-align: center;
+}
+.fukuan div img{
+	width: 90%;
+	height: 100%;
+}
+.vip-lie{
+	width: 100%;
+	padding-top:0.2rem ;
+	box-sizing: border-box;
+}
+.vip-lie ul li{
+	width: 100%;
+	height: 1.3rem;
+}
+/*foot*/
+.foot{
+    width:100%;
+    height:1.1rem;
+    position: fixed;
+    bottom:0;
+    left:0;
+    background: #F6F6F7;
+}
+.foot ul{
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.foot li{
+    width:20%;
+    height:100%;
+    text-align: center;
+}
+.foot li img{
+    width:60%;
+    margin:0 auto;
+}
